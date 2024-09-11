@@ -16,7 +16,6 @@ public class Issue {
     @JsonFormat(pattern = "yyyy-MM-dd", shape = JsonFormat.Shape.STRING)
     private LocalDate issuedOn;
     private String issuerId;
-
     private String bookName;
     private String studentName;
     private String issuerName;
