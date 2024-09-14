@@ -1,0 +1,44 @@
+<div class="background" style="background-color: rgba(255, 0, 0, 0.681);">
+    <div class="container">
+        <div class="row">
+            <div class="submit-form mx-auto p-5 border border-primary border-3 rounded-5"
+                style="width: 400px; margin-top: 250px; border-radius: 40px; background-color:aquamarine;">
+                <h1 class="text-center" style="color: black;"><b>Issue Book <img
+                            src="https://www.freeiconspng.com/uploads/vector-for-free-use-red-book-icon-29.png"
+                            style="width: 80px"></b></h1>
+                <h1 class="text-center text-primary" style="font-size: 35px;"><b>-</b></h1>
+
+                <div *ngIf="!submitted">
+                    <div class="form-group">
+                        <label for="bookId"><b>Select Book</b></label><br>
+                        <select class="form-select" id="bookId" [(ngModel)]="issue.bookId" name="bookId"
+                            aria-label="Book selection" required>
+                            <option value="">---</option>
+                            <option *ngFor="let book of books" value="{{book.bookId}}">{{book.name}}</option>
+                        </select>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="studentId"><b>Select Student</b></label><br>
+                        <select class="form-select" id="studentId" [(ngModel)]="issue.studentId" name="studentId"
+                            aria-label="Student selection" required>
+                            <option value="">---</option>
+                            <option *ngFor="let student of students" value="{{student.studId}}">{{student.studName}}</option>
+                        </select>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="issuerId"><b>Select Issuer</b></label><br>
+                        <select class="form-select" id="issuerId" [(ngModel)]="issue.issuerId" name="issuerId"
+                            aria-label="Issuer selection" required>
+                            <option value="">---</option>
+                            <option *ngFor="let issuer of issuers" value="{{issuer.librarianId}}">{{issuer.name}}</option>
+                        </select>
+                    </div><br>
+                    <button type="button" (click)="issueBook()" class="btn btn-success">Submit</button>
+                </div>
+                <div *ngIf="submitted">
+                    <h4>Issue was added successfully!</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

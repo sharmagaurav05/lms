@@ -1,0 +1,42 @@
+<div class="background" style="background-color: rgba(137, 43, 226, 0.752);">
+    <div class="container">
+        <div class="row">
+            <div class="submit-form mx-auto p-5 border border-primary border-3 rounded-5"
+                style="width: 400px; margin-top: 250px; border-radius: 40px; background-color:chocolate;">
+                <h2 class="text-center" style="color: black;"><b>Register Librarian <img
+                            src="https://cdn3.iconfinder.com/data/icons/education-248/128/48-1024.png"
+                            style="width: 80px"></b></h2>
+                <h1 class="text-center text-primary" style="font-size: 35px;"><b>-</b></h1>
+
+                <div *ngIf="!submitted">
+                    <div class="form-group">
+                        <label for="name"><b>Name</b></label><br>
+                        <input type="text" class="form-control" id="name" required [(ngModel)]="librarian.name"
+                            name="name" />
+                    </div><br>
+                    <div class="form-group">
+                        <label for="email" style="color: black;"><b>Email</b></label>
+                        <input type="email" class="form-control" id="email" required [(ngModel)]="librarian.email"
+                            name="email" />
+                    </div><br>
+                    <div class="form-group">
+                        <label for="address" style="color: black;"><b>Address</b></label>
+                        <input type="address" class="form-control" id="address" required [(ngModel)]="librarian.address"
+                            name="address" />
+                    </div><br>
+                    <div class="form-group">
+                        <label for="phoneNo" style="color: black;"><b>Phone.no</b></label>
+                        <input type="number" class="form-control" id="phoneNo" required [(ngModel)]="librarian.phoneNo"
+                            name="phoneNo" />
+                    </div><br>
+                    <button type="button" (click)="registerLibrarian()"
+                        class="btn btn-success">Register</button>
+                </div>
+                <div *ngIf="submitted">
+                    <h4>Librarian was added successfully!</h4>
+                    <!-- <button (click)="newLibrarian()" class="btn-success">Add Librarian</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

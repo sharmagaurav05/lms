@@ -1,0 +1,86 @@
+<div class="background" style="background-color:rgba(165, 42, 42, 0.527)">
+    <div class="container">
+        <h1 id="stud">List of Students: </h1>
+        <table class="table table-success table-responsive " style="width: 100%;">
+            <thead>
+                <tr>
+                    <th scope="col">sl no.</th>
+                    <th scope="col">StudentName</th>
+                    <th scope="col">Details</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of students, index as i">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{student.studName}}</td>
+                    <td><button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#studentModal" (click) = "getStudentData(student.studId)">
+                            Show Details
+                        </button>
+                    </td>
+                    <td><button class="btn-danger" (click)="deleteStudentById(student.studId)">Delete details</button>
+                    </td>
+                </tr>
+
+                <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel"
+                        aria-hidden="false">
+                        <div class="modal-dialog ">
+                            <div class="modal-content bg-secondary">
+                                <div class="modal-header" style="padding-left: 155px;">
+                                    <h3 class="modal-title" id="studentModal" style="color:cornflowerblue;">Student Details</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="margin-top: 2rem !important; padding-top: 4px; color: white;">
+                                    <h4>Name: {{studentData.studName}}</h4>
+                                    <h4>Email: {{studentData.studEmail}}</h4>
+                                    <h4>Address: {{studentData.studAddress}}</h4>
+                                    <h4>PhoneNo: {{studentData.studPhoneNo}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container btn-info border border-4 border-warning mt-5">
+    <div class="row">
+        <h1 class="mb-3">List of students:- </h1>
+        <table class="table  ">
+            <tr>
+                <th>StudentName</th>
+                <th>Details</th>
+                <th>Actions</th>
+            </tr>
+            <tr *ngFor="let student of students">
+                <td>{{student.studName}}</td>
+                <td><button class="btn btn-success" routerLink="/student/{{student.studId}}">Show details</button></td>
+                <td><button class="btn-dark" (click)="deleteStudentById(student.studId)">Delete details</button></td>
+            </tr>
+        </table>
+    </div>
+</div> -->

@@ -1,0 +1,93 @@
+<div class="background" style="background-color:cornflowerblue">
+    <div class="container">
+        <h1 id="lib">List of Librarians: </h1>
+        <table class="table table-warning table-responsive " style="width: 100%;">
+            <thead>
+                <tr>
+                    <th scope="col">sl no.</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Details</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let librarian of librarians, index as i">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{librarian.name}}</td>
+
+                    <td><button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#librarianModal" (click)="addLibrarianData(librarian.librarianId)">
+                            Show Details
+                        </button></td>
+                    <td><button class="btn btn-danger" (click)="deleteLibrarian(librarian.librarianId)">Delete
+                            Librarian</button></td>
+                </tr>
+
+                <div class="modal fade" id="librarianModal" tabindex="-1" aria-labelledby="librarianModalLabel"
+                    aria-hidden="false">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="librarianModalLabel"
+                                    style="padding-left: 130px; color:blanchedalmond;">Librarian Details</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="margin-top: 2rem !important; padding-top: 4px; color: white;">
+                                <h4>Name: {{librarianData?.name}}</h4>
+                                <h4>Email: {{librarianData?.email}}</h4>
+                                <h4>Address: {{librarianData?.address}}</h4>
+                                <h4>PhoneNo: {{librarianData?.phoneNo}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container bg-primary mt-5 p-5">
+    <div class="row">
+        <h1>List of librarians</h1>
+        <table class="table table-striped mt-5">
+            <tr>
+                <th>Name</th>
+                <th>Details</th>
+                <th>Actions</th>
+            </tr>
+            <tr *ngFor="let librarian of librarians">
+                <td>{{librarian.name}}</td>
+                <td><button class="btn btn-success test" routerLink="/library/{{librarian.librarianId}}">View
+                        Details</button></td>
+                <td><button class="btn btn-danger" (click)="deleteLibrarian(librarian.librarianId)">Delete
+                        Librarian</button></td>
+            </tr>
+        </table>
+    </div>
+</div> -->

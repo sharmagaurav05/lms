@@ -1,0 +1,35 @@
+.button {
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+
+.container {
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 184px;
+}
+
+#change{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+
+.modal-content{
+    border: 3px solid wheat;
+    border-radius: 25px;
+    background-color: rgba(137, 43, 226, 0.656);
+}
+
+.modal-body{
+    color: azure;
+    padding-top: 4px;
+    margin-top: 2rem !important;
+}
+
+

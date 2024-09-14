@@ -1,0 +1,95 @@
+<div class="background" style="background-color: rgba(255, 255, 0, 0.505);">
+    <div class="container">
+        <div class="row">
+            <div class="submit-form mx-auto p-5 border border-primary border-3 rounded-5"
+                style="width: 400px; margin-top: 250px; border-radius: 40px; background-color:rgba(0, 255, 255, 0.768);">
+                <h2 class="text-center" style="color: black;"><b>Register Student <img
+                            src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Student-3-1024.png"
+                            style="width: 80px"></b></h2>
+                <h1 class="text-center text-primary" style="font-size: 35px;"><b>-</b></h1>
+
+                <div *ngIf="!submitted">
+                    <div class="form-group" >
+                        <label for="studName"><b>Student Name</b></label><br>
+                        <input type="text" class="form-control" id="studName" required [(ngModel)]="student.studName"
+                            name="studName" />
+                    </div><br>
+                    <div class="form-group">
+                        <label for="studEmail" style="color: black;"><b>Student Email</b></label>
+                        <input class="form-control" id="studEmail" required [(ngModel)]="student.studEmail" name="studEmail" />
+                    </div><br>
+                    <div class="form-group">
+                        <label for="studAddress" style="color: black;"><b>Student Adreess</b></label>
+                        <input class="form-control" id="studAddress" required [(ngModel)]="student.studAddress" name="studAddress" />
+                    </div><br>
+                    <div class="form-group">
+                        <label for="studPhoneNo" style="color: black;"><b>Student Phone.no</b></label>
+                        <input class="form-control" id="studPhoneNo" required [(ngModel)]="student.studPhoneNo" name="studPhoneNo" />
+                    </div><br>
+                    <button type="button"  (click)="registerStudent()"
+                        class="btn btn-success">Submit</button>
+                </div>
+                <div *ngIf="submitted">
+                    <h4>Student was added successfully!</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="background" style="background-color: rgba(0, 128, 0, 0.418)">
+    <div class="container">
+        <div class="row">
+            <div class="submit-form mx-auto p-5 border border-primary border-3 rounded-5"
+                style="width: 400px; margin-top: 250px; border-radius: 40px; background-color: rgb(196, 197, 255);">
+                <h2 class="text-center" style="color: black; padding-top: 2px;"><b>Register Student <img
+                            src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Student-3-1024.png"
+                            style="width: 80px"></b></h2>
+                <h1 class="text-center text-primary" style="font-size: 35px;"><b>-</b></h1>
+
+                <div *ngIf="!submitted">
+                    <div class="form-group">
+                        <label for="studName"></label>
+                        <input type="text" id="studName" placeholder="Name" class="form-control" required [ngModel]="student.studName"
+                        name="studName"><br>
+                    </div>  
+                    <div class="form-group">    
+                        <label for="studEmail"></label>
+                        <input type="email" placeholder="Email" id="studEmail" class="form-control" required [ngModel]="student.studEmail"
+                        name="studEmail"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="studAddress"></label>
+                        <input type="text" placeholder="Adreess" id="studAddress" class="form-control" required [ngModel]="student.studAddress"
+                        name="studAddress"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="studPhoneNo"></label>
+                        <input type="number" placeholder="Phone no." id="studPhoneNo" class="form-control" required [ngModel]="student.studPhoneNo"
+                        name="studPhoneNo"><br>
+                    </div>
+                    <button type="button" onclick="alert('Student registered')" (click)="registerStudent()" class="btn btn-success">Register</button>
+                </div>
+                <div *ngIf="submitted">
+                    <h4>Student registered successfully: </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

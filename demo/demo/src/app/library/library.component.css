@@ -1,0 +1,36 @@
+.button {
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+
+.container {
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+}
+
+.btn-danger {
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.btn-success{
+    padding: 7px;
+    border-radius: 5px;
+}
+
+#lib {
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.modal-content{
+    background-color: rgb(153, 51, 136);
+    border: 3px solid palevioletred;
+    border-radius: 30px;
+}
+

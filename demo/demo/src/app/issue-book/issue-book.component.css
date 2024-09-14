@@ -1,0 +1,14 @@
+.submit-form {
+    margin-bottom: 5rem !important;
+    margin-top: 2rem !important;  
+}
+
+input {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+input:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+}

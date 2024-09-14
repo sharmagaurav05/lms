@@ -1,0 +1,102 @@
+.container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    padding-top: 161px;
+    padding-bottom: 161px;
+}
+
+img {
+    margin-left: 50px;
+}
+
+.login {
+    background-color: rgba(100, 148, 237, 0.537);
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+.login:hover {
+    background-color: rgba(200, 0, 255, 0.667);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0.5, 0.99);
+}
+
+#change{
+    color: white;
+}
+
+#change:hover {
+    color: red;
+}
+
+.card-body {
+    margin-top: 190px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    display: none;
+}
+
+.card {
+    border: 2px solid blue;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+.card:hover .card-body {
+    display: block;
+}
+
+
+.footer-row {
+    display: flex;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    list-style-type: none;
+    padding-bottom: 30px;
+}
+
+li {
+    padding-left: 60px;
+}
+
+li:hover{
+    transform: translateY(-10px);
+}
+
+.text {
+    padding-left: 470px;
+    margin-bottom: 50px;
+    font-size: 25px;
+    color: white;
+}
+
+.footer {
+    padding-bottom: 2px;
+}
+
+.link li {
+    width: 25%;
+}
+
+.row {
+    --bs-gutter-x: 0rem !important;
+}

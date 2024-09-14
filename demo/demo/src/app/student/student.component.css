@@ -1,0 +1,29 @@
+.button {
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+
+.container {
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 18rem;
+}
+
+.btn-danger{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#stud{
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.modal-content {
+    border: 2px solid black;
+    border-radius: 30px;
+}

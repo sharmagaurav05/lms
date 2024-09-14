@@ -1,0 +1,33 @@
+<div class="background" style="background-color: rgba(221, 0, 255, 0.127);">
+    <div class="container">
+        <div class="row">
+            <div class="submit-form mx-auto p-5 border border-warning border-3 rounded-5"
+                style="width: 400px; margin-top: 250px; border-radius: 40px; background-color: bisque;">
+                <h1 class="text-center" style="color: black;"><b>Save Book <img
+                            src="https://icon-library.com/images/save-png-as-icon/save-png-as-icon-1.jpg"
+                            style="width: 80px"></b></h1>
+                <h1 class="text-center text-primary" style="font-size: 35px;"><b>-</b></h1>
+
+                <div *ngIf="!submitted">
+                    <div class="form-group">
+                        <label for="name"><b>Book Name</b></label><br>
+                        <input type="text" class="form-control" id="name" required [(ngModel)]="book.name"
+                            name="name" />
+                    </div><br>
+                    <div class="form-group">
+                        <label for="price" style="color: black;"><b>Book Price</b></label>
+                        <input class="form-control" id="price" required [(ngModel)]="book.price" name="price" />
+                    </div><br>
+                    <div class="form-group">
+                        <label for="author" style="color: black;"><b>Author</b></label>
+                        <input class="form-control" id="author" required [(ngModel)]="book.author" name="author">
+                    </div>
+                    <button type="button" (click)="saveBook()" class="btn btn-success" style="margin-top: 15px; border: 2px solid seagreen; border-radius: 5px;">Submit</button>
+                </div>
+                <div *ngIf="submitted">
+                    <h4>Book was added successfully!</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

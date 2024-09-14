@@ -1,0 +1,29 @@
+#change{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.btn-success{
+    padding: 5px;
+    border: 2px solid rebeccapurple;
+    border-radius: 5px;
+}
+
+.btn-danger{
+    padding: 5px;
+    border: 2px solid rebeccapurple;
+    border-radius: 5px;
+}
+
+.container{
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+}
+
+.modal-content{
+    background-color: rgb(153, 51, 136);
+    border: 3px solid palevioletred;
+    border-radius: 30px;
+}

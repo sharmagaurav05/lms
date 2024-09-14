@@ -1,0 +1,73 @@
+<div class="background" style="background-color:rgb(153, 51, 136)">
+    <div class="container">
+        <h1 id="change">List of Issues:- </h1>
+        <table class="table table-secondary table-responsive " style="width: 100%;">
+            <thead>
+                <tr>
+                    <th scope="col">Sl no.</th>
+                    <th scope="col">Book</th>
+                    <th scope="col">Student</th>
+                    <th scope="col">Issued By</th>
+                    <th scope="col">Issued On</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let issue of issues, index as i">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{issue.bookName}}</td>
+                    <td>{{issue.studentName}}</td>
+                    <td>{{issue.issuerName}}</td>
+                    <td>{{issue.issuedOn}}</td>
+                    <td><button class="btn-danger" (click)="getDeletedById(issue.issueId);">Delete issue</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="background" style="background-color: wheat;">
+    <div class="container mt-5 bg-info border border-3 border-danger ">
+        <div class="row">
+            <h1 class="bg-warning "> List of issues </h1>
+            <table class="table table-striped mt-2">
+                <tr>
+                    <th>Student_Id</th>
+                    <th>Details</th>
+                    <th>Actions</th>
+                </tr>
+                <tr *ngFor="let issue of issues">
+                    <td>{{issue.studentId}}</td>
+                    <td><button class="btn-success" routerLink="/issue/{{issue.issueId}}">View details</button></td>
+                    <td><button class="btn-danger" (click)="getDeletedById(issue.issueId)">Delete issue</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div> -->
