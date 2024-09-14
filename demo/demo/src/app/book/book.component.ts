@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BookService } from './book.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-book',
@@ -36,9 +36,7 @@ export class BookComponent implements OnInit {
       this.bookData = data;
     })
   }
+  showData(){
 
-  // showDetails(){
-  //   this.toastr.success('Some messages', 'Details');
-  // }
-
+  }
 }
