@@ -25,7 +25,7 @@ import java.time.format.DateTimeFormatter;
 public class IssueController {
     @Autowired
     private IssueService issueService;
-
+    private IssueService issue;
     public IssueController(IssueService issueService) {
         this.issueService = issueService;
     }
