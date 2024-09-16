@@ -21,6 +21,14 @@ export class BookService {
     return this.http.get(`http://localhost:8080/book/delete-book/${bookId}`);
   }
 
+  getBooksByPriceRange(endPrice: string){
+    if (endPrice === '0') {
+      return this.http.get('http://localhost:8080/book/get-all-books');
+    } else {
+      return this.http.get(`http://localhost:8080/book/filter-by-price-range/startPrice/${0}/endPrice/${endPrice}`);
+    }
+  }
+
   saveBook(data: any): Observable<any>{
     return this.http.post("http://localhost:8080/book/save-book",data);
   }

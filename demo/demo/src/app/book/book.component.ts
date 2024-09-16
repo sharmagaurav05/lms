@@ -13,7 +13,7 @@ export class BookComponent implements OnInit {
   books: any;
   bookData: any;
 
-  constructor(private bookService: BookService, private router: Router, private toastr: ToastrService) { }
+  constructor(private bookService: BookService, private router: Router) { }
 
   ngOnInit(): void {
     this.getAllBooks();
@@ -36,7 +36,11 @@ export class BookComponent implements OnInit {
       this.bookData = data;
     })
   }
-  showData(){
 
+  getBooksByPriceRange(event: Event){
+    const endPrice = (event.target as HTMLInputElement).value;
+    this.bookService.getBooksByPriceRange(endPrice).subscribe((data: any) =>{
+      this.books = data;
+    })
   }
 }

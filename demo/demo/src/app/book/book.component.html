@@ -1,5 +1,16 @@
 <div class="background" style="background-color:rgba(95, 158, 160, 0.785)">
     <div class="container">
+        <div class="cont">
+            <div class="form-group">
+                <label for="priceRange"><b>Filter books by price range : </b></label><br>
+                <select id="priceRange" name="priceRange" aria-label="Show books by price range" (change)="getBooksByPriceRange($event)">
+                    <option value="0">All Books</option>
+                    <option value="300">Less than 300</option>
+                    <option value="500">Less than 500</option>
+                    <option value="800">Less than 800</option>
+                </select>
+            </div><br>
+        </div>
         <h1 id="change">List of Books:- </h1>
         <table class="table table-primary table-responsive " style="width: 100%;">
             <thead>
@@ -14,29 +25,31 @@
                 <tr *ngFor="let book of books; index as i">
                     <th scope="row">{{i+1}}</th>
                     <td>{{book.name}}</td>
-                    <td><button class="btn-success button" data-bs-toggle="modal" data-bs-target="#bookModal" (click)="addBookData(book.bookId)">Show
+                    <td><button class="btn-success button" data-bs-toggle="modal" data-bs-target="#bookModal"
+                            (click)="addBookData(book.bookId)">Show
                             details</button></td>
 
                     <td><button class="btn-danger button" (click)="deleteBook(book.bookId)">Delete Book</button></td>
                 </tr>
                 <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3 class="modal-title" id="bookModal" style="color: yellow; padding-left: 150px;">Book Details
-                                    </h3>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <h4>Name : {{bookData?.name}}</h4>
-                                    <h4>Price : {{bookData?.price}}</h4>
-                                    <h4>Author : {{bookData?.author}}</h4>
-                                </div>
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="bookModal" style="color: yellow; padding-left: 150px;">Book
+                                    Details
+                                </h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Name : {{bookData?.name}}</h4>
+                                <h4>Price : {{bookData?.price}}</h4>
+                                <h4>Author : {{bookData?.author}}</h4>
                             </div>
                         </div>
                     </div>
+                </div>
             </tbody>
         </table>
     </div>
