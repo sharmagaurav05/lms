@@ -29,6 +29,16 @@ export class BookService {
     }
   }
 
+
+  getBooksByAuthor(authorName: string) {
+    if (authorName === 'All') {
+      return this.http.get('http://localhost:8080/book/get-all-books');
+    }
+    else {
+      return this.http.get(`http://localhost:8080/book/author/books/${authorName}`);
+    }
+  }
+
   saveBook(data: any): Observable<any>{
     return this.http.post("http://localhost:8080/book/save-book",data);
   }

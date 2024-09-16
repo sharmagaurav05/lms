@@ -1,13 +1,54 @@
 <div class="background" style="background-color:rgba(95, 158, 160, 0.785)">
     <div class="container">
+        <!-- <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="priceRange"><b>
+                            <h4>Filter books by price range : </h4>
+                        </b></label><br>
+                    <select id="priceRange" style="height: 35px; width: 135px; color: white; background-color: black;"
+                        name="priceRange" aria-label="Show books by price range" (change)="getBooksByPriceRange($event)">
+                        <option value="0">All Books</option>
+                        <option value="300">Less than 300</option>
+                        <option value="500">Less than 500</option>
+                        <option value="800">Less than 800</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="author"><b>
+                            <h4>Filter books by Author : </h4>
+                        </b></label><br>
+                    <select id="author" style="height: 35px; width: 135px; color: white; background-color: black;"
+                        name="author" aria-label="Show books by Author" (change)="getBooksByAuthor($event)">
+                        <option value="All">All Books</option>
+                        <option *ngFor="let book of booksDuplicate;" value="{{book.author}}">{{book.author}}</option>
+                    </select>
+                </div>
+            </div>
+        </div> -->
         <div class="cont">
             <div class="form-group">
-                <label for="priceRange"><b>Filter books by price range : </b></label><br>
-                <select id="priceRange" name="priceRange" aria-label="Show books by price range" (change)="getBooksByPriceRange($event)">
+                <label for="priceRange"><b>
+                        <h4>Filter books by price range : </h4>
+                    </b></label><br>
+                <select id="priceRange" style="height: 35px; width: 135px; color: white; background-color: black;"
+                    name="priceRange" aria-label="Show books by price range" (change)="getBooksByPriceRange($event)">
                     <option value="0">All Books</option>
                     <option value="300">Less than 300</option>
                     <option value="500">Less than 500</option>
                     <option value="800">Less than 800</option>
+                </select>
+            </div><br>
+            <div class="form-group">
+                <label for="author"><b>
+                    <h4>Filter books by Author : </h4>
+                </b></label><br>
+                <select id="author" style="height: 35px; width: 135px; color: white; background-color: black;"
+                    name="author" aria-label="Show books by Author" (change)="getBooksByAuthor($event)">
+                    <option value="All">All Books</option>
+                    <option *ngFor="let book of booksDuplicate;" value="{{book.author}}">{{book.author}}</option>
                 </select>
             </div><br>
         </div>

@@ -62,8 +62,8 @@ public class BookController {
     }
 
 
-    @GetMapping("/author/books")
-    public ResponseEntity<List<Book>> getBooksByAuthor(@RequestParam String author){
+    @GetMapping("/author/books/{author}")
+    public ResponseEntity<List<Book>> getBooksByAuthor(@PathVariable String author){
         List<Book> books = bookService.getBooksByAuthor(author);
         return ResponseEntity.ok(books);
     }
