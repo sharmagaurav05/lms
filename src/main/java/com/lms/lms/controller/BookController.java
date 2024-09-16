@@ -55,8 +55,8 @@ public class BookController {
         return ResponseEntity.ok("Book deleted successfully : ");
     }
 
-    @GetMapping("/filter-by-price-range")
-    public ResponseEntity<List<Book>> getBooksByPriceRange(@RequestParam String startPrice, @RequestParam String endPrice){
+    @GetMapping("/filter-by-price-range/startPrice/{startPrice}/endPrice/{endPrice}")
+    public ResponseEntity<List<Book>> getBooksByPriceRange(@PathVariable String startPrice, @PathVariable String endPrice){
         List<Book> books = bookService.getBooksByPriceRange(startPrice,endPrice);
         return ResponseEntity.ok(books);
     }
